@@ -1,0 +1,130 @@
+/* --- COHÉRENCE VISUELLE NOVADIGIT --- */
+body {
+  background-color: #0f172a; /* Bleu nuit profond */
+  background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+  color: #e2e8f0;
+  font-family: "Inter", sans-serif;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: #38bdf8; /* Cyan signature */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  margin-bottom: 50px;
+}
+
+/* --- TABLEAU STYLE GLASSMORPHISM --- */
+table {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0 8px; /* Espacement entre les lignes */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+th {
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* --- ÉTAPES FCC (Adaptées au mode sombre) --- */
+tr[class="read"] {
+  background-image: linear-gradient(
+    to right,
+    rgba(52, 211, 153, 0.1),
+    transparent
+  );
+}
+tr[class="to-read"] {
+  background-image: linear-gradient(
+    to right,
+    rgba(248, 113, 113, 0.1),
+    transparent
+  );
+}
+tr[class="in-progress"] {
+  background-image: linear-gradient(
+    to right,
+    rgba(251, 191, 36, 0.1),
+    transparent
+  );
+}
+
+/* Effet Hover cohérent avec le Projet 02 */
+tr:hover td {
+  background: rgba(255, 255, 255, 0.07);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+span {
+  display: inline-block;
+}
+
+/* --- STATUS CAPSULES NÉON --- */
+span[class="status"],
+span[class^="rate"] {
+  height: 26px;
+  width: 110px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Styles par Status (Sélecteurs d'attributs) */
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid #f87171;
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+tr[class="read"] span[class="status"] {
+  border: 1px solid #34d399;
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+}
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid #fbbf24;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+}
+
+/* --- RATING SYSTEM (Glowing dots) --- */
+span[class^="rate"] > span {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  margin: 0 3px;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+}
+
+/* Points allumés (Cyan Glow) */
+span[class~="one"] span:first-child,
+span[class~="two"] span:nth-child(1),
+span[class~="two"] span:nth-child(2),
+span[class~="three"] span {
+  background-color: #38bdf8;
+  box-shadow: 0 0 8px #38bdf8;
+  border-color: #38bdf8;
+}
