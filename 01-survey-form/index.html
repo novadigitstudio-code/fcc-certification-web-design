@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novadigit | Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="title">freeCodeCamp Survey Form</h1>
+            <p id="description">Merci de prendre le temps de nous aider à améliorer la plateforme</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Nom</label>
+                <input type="text" id="name" placeholder="Entrez votre nom" required>
+            </div>
+
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" placeholder="Entrez votre Email" required>
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="number">Âge (optionnel)</label>
+                <input type="number" id="number" placeholder="Âge" min="10" max="99">
+            </div>
+
+            <div class="form-group">
+                <label for="dropdown">Quel rôle vous décrit le mieux ?</label>
+                <select name="currentrole" id="dropdown">
+                    <option value="">Sélectionnez un rôle</option>
+                    <option value="student">Étudiant</option>
+                    <option value="fulltimejob">Emploi plein temps</option>
+                    <option value="fulltimelearner">Apprenant plein temps</option>
+                    <option value="prefernottosay">Préfère ne pas dire</option>
+                    <option value="other">Autre</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Recommanderiez-vous freeCodeCamp à un ami ?</p>
+                <label><input type="radio" name="recommended" value="definitely" checked> Certainement</label>
+                <label><input type="radio" name="recommended" value="maybe"> Peut-être</label>
+                <label><input type="radio" name="recommended" value="notsure"> Pas sûr</label>
+            </div>
+
+            <div class="form-group">
+                <label>Quelle est votre fonctionnalité préférée ?</label>
+                <select name="favoritefeature" id="dropdown-feature">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="challenges">Défis</option>
+                    <option value="projects">Projets</option>
+                    <option value="community">Communauté</option>
+                    <option value="opensource">Open Source</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <fieldset>
+                    <legend>Qu'aimeriez-vous voir amélioré ? (Cochez tout ce qui s'applique)</legend>
+                    <label><input type="checkbox" name="topics" value="front-end-projects"> Front-end Projects</label>
+                    <label><input type="checkbox" name="topics" value="back-end-projects"> Back-end Projects</label>
+                    <label><input type="checkbox" name="topics" value="challenges"> Challenges</label>
+                    <label><input type="checkbox" name="topics" value="forum"> Forum</label>
+                </fieldset>
+            </div>
+
+            <div class="form-group">
+                <p>Commentaires ou suggestions ?</p>
+                <textarea id="comments" name="comments" placeholder="Entrez votre commentaire ici..."></textarea>
+            </div>
+
+            <button id="submit" type="submit">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>
