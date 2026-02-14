@@ -2,6 +2,12 @@
 
 Ce dossier contient le premier projet de la certification "Responsive Web Design" de freeCodeCamp. Il s'agit d'un formulaire d'enquête complet respectant les standards HTML5.
 
+## 🖼️ Rendu Visuel
+
+| Modèle imposé (FCC) | Version Novadigit Studio (Final) |
+| :---: | :---: |
+| ![Modèle](./SurveyForm-model.png) | ![Résultat](./SurveyForm-result.png) |
+
 ## 🚀 Ma démarche avec l'IA
 Pour ce projet, j'ai utilisé **Gemini** et **Cursor** comme partenaires de développement. 
 - **Structure :** L'IA m'a aidé à nettoyer le code HTML en remplaçant les balises de saut de ligne (`<br>`) par des conteneurs CSS (`form-group`), ce qui est la norme professionnelle.
@@ -16,3 +22,5 @@ Pour ce projet, j'ai utilisé **Gemini** et **Cursor** comme partenaires de dév
 ## 📁 Fichiers
 - `index.html` : La structure du formulaire.
 - `styles.css` : Le design personnalisé Novadigit Studio.
+- `SurveyForm-model.png` : Capture du modèle de base.
+- `SurveyForm-result.png` : Capture du rendu final optimisé.
