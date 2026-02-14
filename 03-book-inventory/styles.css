@@ -128,3 +128,34 @@ span[class~="three"] span {
   box-shadow: 0 0 8px #38bdf8;
   border-color: #38bdf8;
 }
+/* --- OPTIMISATION RESPONSIVE  --- */
+
+/* Le wrapper permet au tableau de garder sa taille mais de glisser sous le doigt */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* Active le scroll horizontal */
+  border-radius: 15px;
+  -webkit-overflow-scrolling: touch; /* Scroll fluide sur iPhone */
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  /* On force le tableau à garder une largeur lisible */
+  table {
+    min-width: 600px;
+  }
+
+  td,
+  th {
+    padding: 10px 8px;
+    font-size: 0.8rem;
+  }
+}
