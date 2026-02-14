@@ -1,0 +1,76 @@
+/* Style Global NovaDigit */
+body {
+  background-color: #1a1a2e; /* Fond bleu nuit très sombre */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 50px 20px;
+}
+
+#playing-cards {
+  display: flex;
+  gap: 20px;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* Style de la Carte */
+.card {
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 12px;
+  width: 160px; /* Taille fixe plus réaliste */
+  height: 240px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre portée */
+  transition: transform 0.3s ease; /* Animation fluide */
+  cursor: pointer;
+}
+
+/* Effet au survol */
+.card:hover {
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Couleurs des signes */
+.red {
+  color: #e94560; /* Un beau rouge moderne */
+}
+
+/* Positionnement des blocs */
+.left {
+  align-self: flex-start;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.middle {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem; /* Gros symboles au centre */
+}
+
+.right {
+  align-self: flex-end;
+  line-height: 1;
+  font-weight: bold;
+  transform: rotate(
+    180deg
+  ); /* Chiffre du bas à l'envers comme les vraies cartes */
+}
+
+/* Mise en page interne pour le 4 et le 5 */
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+p {
+  margin: 0;
+  text-align: center;
+}
