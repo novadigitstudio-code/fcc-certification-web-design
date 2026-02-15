@@ -1,0 +1,213 @@
+/* --- Variables de Design NovaDigit Studio --- */
+:root {
+  /* Mode Light */
+  --primary-blue: #007bff;
+  --secondary-blue: #0056b3;
+  --bg-color: #f8f9fa;
+  --text-color: #1e293b;
+  --nav-bg: #ffffff;
+  --code-bg: #1e1e1e;
+  --code-text: #d4d4d4;
+  --border-color: #e2e8f0;
+  --nav-width: 300px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Mode Dark */
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --nav-bg: #1e293b;
+    --border-color: #334155;
+    --primary-blue: #38bdf8;
+  }
+}
+
+/* --- Reset et Base --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* --- Structure du Menu (Mobile-First) --- */
+#navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 2px solid var(--primary-blue);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+#navbar header {
+  padding: 15px;
+  text-align: center;
+}
+
+#navbar h1 {
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  letter-spacing: 1px;
+}
+
+/* --- Le Hack du Menu Hamburger --- */
+#menu-toggle {
+  display: none; /* Cache la checkbox */
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-blue);
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+/* Logique d'ouverture du menu sur mobile */
+#navbar ul {
+  list-style: none;
+  max-height: 0; /* Menu fermé par défaut */
+  overflow-y: hidden; /* Cache le scroll quand c'est fermé */
+  transition: max-height 0.4s ease-out;
+  background-color: var(--nav-bg);
+}
+
+#menu-toggle:checked ~ ul {
+  max-height: calc(100vh - 60px); /* Prend toute la hauteur moins le header */
+  overflow-y: auto; /* Active le scroll interne si la liste est trop longue */
+  border-top: 1px solid var(--border-color);
+}
+
+/* Animation des barres en "X" */
+#menu-toggle:checked ~ .hamburger span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#menu-toggle:checked ~ .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked ~ .hamburger span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Liens de Navigation --- */
+.nav-link {
+  display: block;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--primary-blue);
+  color: white;
+  padding-left: 35px;
+}
+
+/* --- Contenu Principal --- */
+#main-doc {
+  padding: 20px;
+  max-width: 100%;
+}
+
+.main-section {
+  margin-bottom: 60px;
+}
+
+.main-section header h2 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+ul {
+  margin: 15px 0 15px 30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* --- Blocs de Code (Style IDE) --- */
+pre {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-left: 4px solid var(--primary-blue);
+  font-size: 0.9rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+code {
+  font-family: "Fira Code", "Cascadia Code", monospace;
+}
+
+/* --- Mise en page Desktop (Media Query) --- */
+@media (min-width: 800px) {
+  .hamburger {
+    display: none; /* Plus besoin de bouton sur PC */
+  }
+
+  #navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--nav-width);
+    height: 100vh;
+    border-bottom: none;
+    border-right: 2px solid var(--primary-blue);
+    overflow-y: auto;
+  }
+
+  #navbar ul {
+    max-height: none; /* Toujours déplié sur PC */
+  }
+
+  #main-doc {
+    margin-left: var(--nav-width);
+    padding: 40px 60px;
+    max-width: calc(100% - var(--nav-width));
+  }
+}
