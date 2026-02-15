@@ -8,6 +8,13 @@ Ce projet est une page de documentation technique complète pour JavaScript. Il 
 | :---: | :---: |
 | ![Modèle](./TechnicalDocumentation-model.png) | ![Résultat](./TechnicalDocumentation-result-desktop.png) |
 
+### 📱 Focus Mobile & Dark Mode
+Pour garantir une expérience optimale sur smartphone, le menu se replie intelligemment :
+
+<p align="center">
+  <img src="./TechnicalDocumentation-result-mobil.png" width="350" alt="Rendu Mobile NovaDigit" />
+</p>
+
 ## 🚀 Design & Identité NovaDigit
 Pour ce projet, j'ai appliqué la charte graphique de **NovaDigit Studio** afin d'assurer une cohérence visuelle avec les projets précédents :
 - **Navigation Pro :** Une barre latérale fixe (desktop) qui devient un menu hamburger animé en pur CSS sur mobile.
