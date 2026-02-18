@@ -38,7 +38,7 @@ Le projet est structuré comme un portail centralisé permettant d'explorer chaq
 ---
 
 ## 🛠️ Stack Technique & Outils
-* **Éditeur :** Cursor (IA-Powered Code Editor)
+* **Éditeur :** Visual Studio Code
 * **Modèle :** Gemini 2.0 & 1.5 Flash
 * **Workflow :** Approche "AI-First" pour le refactoring et l'optimisation du design système.
 * **Déploiement :** GitHub Pages pour l'hébergement live.
