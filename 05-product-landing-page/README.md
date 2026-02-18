@@ -10,7 +10,7 @@ Ce projet fait partie de la certification "Responsive Web Design" de freeCodeCam
 | ![Modèle](./product-landing-page-model.png) | ![Résultat Desktop](./product-landing-page-desktop.png) |
 
 ### 📱 Vue Responsive (Mobile)
-![Résultat Mobile](./product-landing-page-mobile.png)
+![Résultat Mobile](./product-landing-page-mobil.png)
 
 ## 🚀 L'approche NovaDigit Studio (IA Assistée)
 Pour ce projet, j'ai utilisé **Gemini** et **Cursor** pour pousser l'intégration technique au niveau supérieur :
